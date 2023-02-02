@@ -3,6 +3,6 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Hello Esi Data!! Test property' + process.env.TEST_PROPERTY;
+    return `Environment Variables -> TEST_PROPERTY: ' + ${process.env.TEST_PROPERTY}. DATABASE_URL: ${process.env.DATABASE_URL}`;
   }
 }
